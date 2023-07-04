@@ -26,6 +26,11 @@ export default async function RootLayout({
 }) {
   return (
     <html className={`${roboto.variable} ${lobster.variable}  `} lang="en">
+      <head>
+  // Existing meta tags...
+
+  <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://api.stripe.com https://errors.stripe.com https://r.stripe.com https://stripe.com"/>
+</head>
       <Hydrate>
         <Nav />
         {children}
